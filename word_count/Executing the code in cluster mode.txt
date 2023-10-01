@@ -1,0 +1,18 @@
+#zip the code created 
+zip -r testing.zip code.py
+
+#go to the spark/bin
+cd /opt/spark/bin
+
+#starting the worker
+start-worker.sh spark://ahmed-virtual-machine:7077
+
+#starting the master 
+start-master.sh
+
+#submit the code
+spark-submit --master spark://ahmed-virtual-machine:7077 --name testing --py-files /home/ahmed/testing.zip /home/ahmed/code.py
+
+#If we want to work locally we can simply use
+cd /home/ahmed
+spark-submit --master local code.py

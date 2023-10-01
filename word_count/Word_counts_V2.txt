@@ -1,8 +1,17 @@
+#function to normalize the words to lower case
+def normalizeWords(text):
+ return re.compile(r'\W+', re.UNICODE).split(text.lower())
+
+#updating spark configuration
+conf = SparkConf().setMaster("local").setAppName("WordCount")
+sc = SparkContext.getOrCreate(conf = conf)
+
+
 #import the file 
 input = sc.textFile("file:///sparkcourse/book.txt")
 
 #Mapping the words
-words = input.flatMap(lambda x: x.split())
+words = input.flatMap(normalizeWords)
 
 #Count the occurence of each word
 wordCounts = words.countByValue()
