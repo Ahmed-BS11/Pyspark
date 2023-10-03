@@ -1,10 +1,14 @@
-For this part of the project I have used the Kaggle dataset named "new-york-city-airbnb-open-data"
+# Project Data Source
 
-This is a link for the dataset
-https://www.kaggle.com/datasets/dgomonov/new-york-city-airbnb-open-data/
+For this part of the project, I have used the Kaggle dataset named "new-york-city-airbnb-open-data."
 
-to run a terminal command on kaggle, colabs or Jupiter just write it in a cell and add ! at the begging 
+[New York City Airbnb Open Data](https://www.kaggle.com/datasets/dgomonov/new-york-city-airbnb-open-data/)
 
-example to install Pyspark you can do as follows in a cell
+# Running Terminal Commands
 
+To run a terminal command on Kaggle, Colab, or Jupyter, simply write it in a cell and add '!' at the beginning.
+
+For example, to install PySpark, you can do as follows in a cell:
+
+```python
 !pip install pyspark
